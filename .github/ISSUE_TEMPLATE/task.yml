@@ -1,0 +1,26 @@
+name: Task
+description: Simple task with subtasks
+title: "[Task] "
+labels: ["task"]
+body:
+  - type: input
+    id: project
+    attributes:
+      label: Project
+      placeholder: e.g., Alpha
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options: [P0, P1, P2]
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      value: |
+        ### Checklist
+        - [ ] First step
+        - [ ] Next step
+        - [ ] Done
